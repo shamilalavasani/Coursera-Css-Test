@@ -1,0 +1,75 @@
+    * {
+      box-sizing: border-box;
+      direction: ltr;
+      font-family: Tahoma, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 175%;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      border: 1px solid black;
+      padding: 50px 15px 15px 15px;
+      margin-bottom: 20px;
+      background-color: #f0f0f0;
+      position: relative;
+    }
+
+    .section-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #ffc107;
+      border: 1px solid black;
+      padding: 5px 15px;
+      font-size: 125%;
+    }
+
+    /* Default (Mobile First - <=767px) */
+    .section {
+      width: 100%;
+      float: none;
+    }
+
+    /* Tablet (768px - 991px) */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .section {
+        float: left;
+        margin-right: 2%;
+      }
+
+      .section:nth-child(2) {
+        margin-right: 0;
+      }
+
+      .section:nth-child(1), .section:nth-child(2) {
+        width: 49%;
+      }
+
+      .section:nth-child(3) {
+        width: 100%;
+        clear: both;
+        margin-top: 20px;
+      }
+    }
+
+    /* Desktop (992px and up) */
+    @media (min-width: 992px) {
+      .section {
+        float: left;
+        width: 32%;
+        margin-right: 2%;
+      }
+
+      .section:nth-child(1) {
+        margin-right: 0;
+      }
+    }
